@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-deep: #050308;
+    --bg-veil-start: #130822;
+    --bg-surface: #0d0716;
+    --bg-card: rgba(19, 11, 31, 0.65);
+    --bg-card-hover: rgba(27, 16, 44, 0.85);
+    --accent: #a855f7;
+    --accent-muted: #7e22ce;
+    --text-primary: #ededee;
+    --text-secondary: #9f9baa;
+    --text-dim: #645f72;
+    --border-hairline: rgba(255, 255, 255, 0.08);
+    --border-card: rgba(168, 85, 247, 0.15);
+    --border-card-hover: rgba(192, 132, 252, 0.35);
+
+    font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  body {
+    background-color: #050308;
+    color: var(--text-primary);
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Familjen Grotesk', system-ui, sans-serif;
+    font-feature-settings: "ss01", "liga";
+    text-wrap: balance;
+  }
+
+  code, pre, .font-mono, .badge-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #050308;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a1b42;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4c2d7a;
+}
+
+/* Scroll reveal helper classes */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-active {
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+
+/* Precision Hairlines & Monolith Card Styling */
+.card-border {
+  border: 1px solid var(--border-hairline);
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-border:hover {
+  border-color: var(--border-card-hover);
+  background: var(--bg-card-hover);
+}
+
+/* Modal Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-scale-up {
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
