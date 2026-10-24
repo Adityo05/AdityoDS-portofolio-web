@@ -1,16 +1,79 @@
-# React + Vite
+# Personal Portfolio Website — Adityo Dwi Saputro
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A personal portfolio website built using **React 19**, **Vite**, **Tailwind CSS**, **Three.js**, and **React Bits**. Created to showcase my projects, technical skills, and educational background as a Web & App Developer.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+This website includes **7 main features**:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Interactive 3D Lanyard Card**  
+   An interactive 3D ID badge rendered using Three.js and WebGL. Visitors can drag, rotate, and interact with the card in real-time.
 
-## Expanding the Oxlint configuration
+2. **React Bits UI Animations**  
+   Smooth visual effects including an opening splash screen loader, dynamic header animations, and a typewriter text effect for my roles.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+3. **About Me & Certificate Preview**  
+   A summary of my background in Informatics Engineering from State Polytechnic of Pontianak (GPA 3.96 / 4.00), with a popup modal to preview my academic certificate.
+
+4. **Project Showcase & Detail Pages**  
+   Cards highlighting featured projects, with separate detail pages explaining the project overview, key features, personal contributions, and screenshots.
+
+5. **Interactive Tech Stack Carousel**  
+   An infinite-looping logo slider for tools and programming languages. Supports click-to-focus and manual dragging with auto-resume.
+
+6. **Contact Channels & CV Download**  
+   Direct links to my LinkedIn, GitHub, WhatsApp, and Email, along with a one-click button to download my resume (PDF).
+
+7. **Responsive Layout & Scroll Animations**  
+   A clean dark-theme interface that adapts smoothly across mobile, tablet, and desktop screens, enhanced with lightweight scroll-reveal animations.
+
+---
+
+## Tech Stack
+
+- **Framework:** React 19
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS (v4)
+- **3D Graphics:** Three.js
+- **Animations:** React Bits
+- **Icons:** Lucide React & React Icons
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+Make sure you have [Node.js](https://nodejs.org/) (v18 or newer) installed.
+
+### Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Adityo05/AdityoDS-portofolio-web.git
+   cd AdityoDS-portofolio-web
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+---
+
+## Credits & Contact
+
+**Adityo Dwi Saputro**  
+- **GitHub:** [@Adityo05](https://github.com/Adityo05)    
