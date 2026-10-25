@@ -39,6 +39,12 @@ export default function Navbar() {
             Projects
           </a>
           <a
+            href="#certifications"
+            className="px-3.5 py-1.5 text-zinc-300 hover:text-white hover:bg-white/5 rounded-full transition-colors"
+          >
+            Sertifikasi
+          </a>
+          <a
             href="#tech"
             className="px-3.5 py-1.5 text-zinc-300 hover:text-white hover:bg-white/5 rounded-full transition-colors"
           >
@@ -92,6 +98,13 @@ export default function Navbar() {
             className="block text-zinc-300 hover:text-purple-300 text-sm font-medium py-1.5"
           >
             Projects
+          </a>
+          <a
+            href="#certifications"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block text-zinc-300 hover:text-purple-300 text-sm font-medium py-1.5"
+          >
+            Sertifikasi
           </a>
           <a
             href="#tech"

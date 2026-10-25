@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Projects from './components/Projects';
 import ProjectDetail from './components/ProjectDetail';
+import Certifications from './components/Certifications';
 import TechStack from './components/TechStack';
 import Contact from './components/Contact';
 import useScrollReveal from './hooks/useScrollReveal';
@@ -81,6 +82,9 @@ export default function App() {
 
             {/* Projects Section */}
             <Projects onOpenProject={openProject} />
+
+            {/* Certifications & Training Section */}
+            <Certifications />
 
             {/* Tech Stack & Languages Section */}
             <TechStack />
