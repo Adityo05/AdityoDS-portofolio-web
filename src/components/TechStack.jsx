@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import {
   SiHtml5,
   SiCss,
@@ -35,6 +36,17 @@ const techLogos = TECH_ITEMS.map(({ name, Icon, color, href }) => ({
 }));
 
 export default function TechStack() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <section id="tech" className="relative border-t border-white/5 bg-[#050308] py-10 sm:py-16 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -51,13 +63,13 @@ export default function TechStack() {
             preset="spotlight"
             draggable={true}
             labels="below"
-            speed={90}
+            speed={isMobile ? 65 : 90}
             direction="left"
-            logoHeight={44}
-            gap={48}
+            logoHeight={isMobile ? 26 : 44}
+            gap={isMobile ? 18 : 48}
             pauseOnHover={false}
             fadeOut={true}
-            fadeOutWidth={0.14}
+            fadeOutWidth={isMobile ? 0.05 : 0.14}
             ariaLabel="Technology stack"
           />
         </div>
